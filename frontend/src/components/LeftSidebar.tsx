@@ -1,7 +1,7 @@
-export default function Sidebar() {
+export default function LeftSidebar() {
   return (
-    <div className="bg-black col-span-3 h-full text-white">
-      <div className="hover:bg-gray-900 cursor-pointer ml-20 pt-3 rounded-full w-14 h-14 flex justify-center">
+    <div className="col-span-3 h-full text-white">
+      <div className="hover:bg-slate-50 cursor-pointer ml-20 pt-3 rounded-full w-14 h-14 flex justify-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="32"
@@ -15,7 +15,7 @@ export default function Sidebar() {
         </svg>
       </div>
       <div className="pl-20 my-0.5">
-        <button className="text-xl cursor-pointer hover:bg-gray-900 py-2.5 pl-3 pr-10 rounded-3xl flex">
+        <button className="text-xl cursor-pointer hover:bg-slate-50 py-2.5 pl-3 pr-10 rounded-3xl flex">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ export default function Sidebar() {
         </button>
       </div>
       <div className="pl-20 my-0.5">
-        <button className="text-xl cursor-pointer hover:bg-gray-900 py-2.5 pl-3 pr-10 rounded-3xl flex">
+        <button className="text-xl cursor-pointer hover:bg-slate-50 py-2.5 pl-3 pr-10 rounded-3xl flex">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ export default function Sidebar() {
         </button>
       </div>
       <div className="pl-20 my-0.5">
-        <button className="text-xl cursor-pointer hover:bg-gray-900 py-2.5 pl-3 pr-10 rounded-3xl flex">
+        <button className="text-xl cursor-pointer hover:bg-slate-50 py-2.5 pl-3 pr-10 rounded-3xl flex">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@ export default function Sidebar() {
         </button>
       </div>
       <div className="pl-20 my-0.5">
-        <button className="text-xl cursor-pointer hover:bg-gray-900 py-2.5 pl-3 pr-10 rounded-3xl flex">
+        <button className="text-xl cursor-pointer hover:bg-slate-50 py-2.5 pl-3 pr-10 rounded-3xl flex">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,7 @@ export default function Sidebar() {
         </button>
       </div>
       <div className="pl-20 my-0.5">
-        <button className="text-xl cursor-pointer hover:bg-gray-900 py-2.5 pl-3 pr-10 rounded-3xl flex">
+        <button className="text-xl cursor-pointer hover:bg-slate-50 py-2.5 pl-3 pr-10 rounded-3xl flex">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +105,7 @@ export default function Sidebar() {
         </button>
       </div>
       <div className="pl-20 my-0.5">
-        <button className="text-xl cursor-pointer hover:bg-gray-900 py-2.5 pl-3 pr-10 rounded-3xl flex">
+        <button className="text-xl cursor-pointer hover:bg-slate-50 py-2.5 pl-3 pr-10 rounded-3xl flex">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +123,7 @@ export default function Sidebar() {
         </button>
       </div>
       <div className="pl-20 my-0.5">
-        <button className="text-xl cursor-pointer hover:bg-gray-900 py-2.5 pl-3 pr-10 rounded-3xl flex">
+        <button className="text-xl cursor-pointer hover:bg-slate-50 py-2.5 pl-3 pr-10 rounded-3xl flex">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +141,7 @@ export default function Sidebar() {
         </button>
       </div>
       <div className="pl-20 my-0.5">
-        <button className="text-xl cursor-pointer hover:bg-gray-900 py-2.5 pl-3 pr-10 rounded-3xl flex">
+        <button className="text-xl cursor-pointer hover:bg-slate-50 py-2.5 pl-3 pr-10 rounded-3xl flex">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +159,7 @@ export default function Sidebar() {
         </button>
       </div>
       <div className="pl-20 my-0.5">
-        <button className="text-xl cursor-pointer hover:bg-gray-900 py-2.5 pl-3 pr-10 rounded-3xl flex">
+        <button className="text-xl cursor-pointer hover:bg-slate-50 py-2.5 pl-3 pr-10 rounded-3xl flex">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -177,7 +177,7 @@ export default function Sidebar() {
         </button>
       </div>
       <div className="pl-20 my-0.5">
-        <button className="text-xl cursor-pointer hover:bg-gray-900 py-2.5 pl-3 pr-10 rounded-3xl flex">
+        <button className="text-xl cursor-pointer hover:bg-slate-50 py-2.5 pl-3 pr-10 rounded-3xl flex">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +195,7 @@ export default function Sidebar() {
         </button>
       </div>
       <div className="pl-20 my-0.5">
-        <button className="text-xl hover:bg-gray-900 py-2.5 pl-3 pr-10 rounded-3xl flex">
+        <button className="text-xl hover:bg-slate-50 py-2.5 pl-3 pr-10 rounded-3xl flex">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -214,12 +214,12 @@ export default function Sidebar() {
       </div>
       <div className="pl-20 my-5">
         <button className="bg-blue-400 text-xl hover:bg-blue-500 py-3 w-60 rounded-3xl flex justify-center">
-          <span className="">Post</span>
+          <span className="font-bold">Post</span>
         </button>
       </div>
       <div className="pl-20 mt-7 mb-3 text-center place-items-center">
-        <button className="hover:bg-gray-900 pt-3.5 pb-3.5 w-64 rounded-full grid grid-cols-6">
-          <span className="flex justify-start col-span-5">
+        <button className="hover:bg-slate-50 pt-3.5 pb-3.5 w-64 rounded-full grid grid-cols-7">
+          <span className="flex justify-start col-span-6">
             <div className="my-auto ml-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -235,9 +235,9 @@ export default function Sidebar() {
             </div>
             <div className="grid grid-rows-2 pl-3">
               <div className="text-base flex justify-start font-bold">
-                adeshkpatra
+                Adesh Kumar Patra
               </div>
-              <div className="text-base text-gray-500 flex justify-start">
+              <div className="text-base text-slate-200 flex justify-start">
                 @adeshkpatra
               </div>
             </div>
@@ -245,8 +245,8 @@ export default function Sidebar() {
           <div className="flex justify-end col-span-1 m-auto">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              height="20"
-              width="17.5"
+              height="16"
+              width="14"
               viewBox="0 0 448 512"
             >
               <path
