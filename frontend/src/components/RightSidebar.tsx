@@ -3,9 +3,9 @@ import Trending from "./Trending"
 
 export default function RightSidebar() {
   return (
-    <div className="col-span-4 bg-black text-white pl-14 scroll-smooth">
+    <div className="col-span-4 bg-black text-white pl-8">
       <div className="bg-black fixed py-1">
-        <div className="flex justify-start bg-slate-100 focus-within:bg-black h-11 w-96 rounded-full focus-within:border-blue-400 focus-within:border-2">
+        <div className="flex justify-start bg-slate-100 focus-within:bg-black h-12 w-96 rounded-full focus-within:border-blue-400 focus-within:border-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="17"
@@ -31,8 +31,8 @@ export default function RightSidebar() {
           Subscribe to unlock new features and if eligible, receive a share of
           ads revenue.
         </div>
-        <button className="bg-blue-400 text-base font-bold hover:bg-blue-500 py-2 w-32 rounded-3xl flex justify-center mt-2">
-          <span className="">Subscribe</span>
+        <button className="bg-blue-50 text-base font-bold hover:bg-blue-100 py-2 w-32 rounded-3xl flex justify-center mt-2">
+          Subscribe
         </button>
       </div>
 

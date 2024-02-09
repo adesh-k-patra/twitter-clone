@@ -213,8 +213,8 @@ export default function LeftSidebar() {
         </button>
       </div>
       <div className="pl-20 my-5">
-        <button className="bg-blue-400 text-xl hover:bg-blue-500 py-3 w-60 rounded-3xl flex justify-center">
-          <span className="font-bold">Post</span>
+        <button className="bg-blue-50 text-xl hover:bg-blue-100 py-3 w-60 rounded-3xl flex justify-center font-bold">
+          Post
         </button>
       </div>
       <div className="pl-20 mt-7 mb-3 text-center place-items-center">
