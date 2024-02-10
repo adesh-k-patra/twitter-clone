@@ -12,6 +12,9 @@ export default {
         "slate-400": "#1d1f23",
         "slate-500": "#1f2c38",
         "slate-600": "#061019",
+        "slate-700": "#0d1720",
+        "slate-800": "#0c1a14",
+        "slate-900": "#210c14",
         "blue-50": "#1d9bf0",
         "blue-100": "#198cd8",
       },
@@ -19,6 +22,7 @@ export default {
         "slate-50": "#1d96e8",
         "slate-100": "#71767a",
         "slate-200": "#757575",
+        "red-50": "#f91980",
       },
       textDecorationColor: {
         "slate-200": "#757575",
@@ -29,6 +33,15 @@ export default {
       },
       thumbColor: {
         "slate-100": "#71767a",
+      },
+      fill: {
+        "red-50": "#f91980",
+      },
+      stroke: {
+        "slate-100": "#71767a",
+      },
+      strokeWidth: {
+        1: "45",
       },
     },
   },

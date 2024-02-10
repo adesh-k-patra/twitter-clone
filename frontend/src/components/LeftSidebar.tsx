@@ -237,7 +237,7 @@ export default function LeftSidebar() {
               <div className="text-base flex justify-start font-bold">
                 Adesh Kumar Patra
               </div>
-              <div className="text-base text-slate-200 flex justify-start">
+              <div className="text-base text-slate-100 flex justify-start">
                 @adeshkpatra
               </div>
             </div>

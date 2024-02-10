@@ -1,14 +1,13 @@
-import LeftSidebar from "./components/LeftSidebar"
-import Mainbar from "./components/Mainbar"
-import RightSidebar from "./components/RightSidebar"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Home from "./pages/Home"
 
 function App() {
   return (
-    <div className="bg-black grid grid-cols-12">
-      <LeftSidebar />
-      <Mainbar />
-      <RightSidebar />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
