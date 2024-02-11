@@ -23,6 +23,7 @@ export default {
         "slate-50": "#1d96e8",
         "slate-100": "#71767a",
         "slate-200": "#757575",
+        "slate-300": "#1d9bf0",
         "red-50": "#f91980",
       },
       textDecorationColor: {
