@@ -15,6 +15,7 @@ export default {
         "slate-700": "#0d1720",
         "slate-800": "#0c1a14",
         "slate-900": "#210c14",
+        "gray-50": "#181919",
         "blue-50": "#1d9bf0",
         "blue-100": "#198cd8",
       },
@@ -30,6 +31,7 @@ export default {
       borderColor: {
         "slate-50": "#2f3336",
         "slate-100": "#1d9bf0",
+        "slate-300": "#536471",
       },
       thumbColor: {
         "slate-100": "#71767a",

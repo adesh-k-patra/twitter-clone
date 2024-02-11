@@ -1,13 +1,13 @@
 import LeftSidebar from "../components/LeftSidebar"
-import Mainbar from "../components/Mainbar"
-import RightSidebar from "../components/RightSidebar"
+import HomeMainbar from "../components/HomeMainbar"
+import HomeRightSidebar from "../components/HomeRightSidebar"
 
 export default function Home() {
   return (
     <div className="bg-black grid grid-cols-12">
       <LeftSidebar />
-      <Mainbar />
-      <RightSidebar />
+      <HomeMainbar />
+      <HomeRightSidebar />
     </div>
   )
 }
