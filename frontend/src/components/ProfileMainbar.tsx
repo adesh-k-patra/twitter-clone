@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom"
 import Feed from "./Feed"
 
-export default function ProfileMainbar() {
+export default function ProfileMainbar({route}:{route: string}) {
+  const navigate = useNavigate()
   return (
     <div className="col-span-5 border border-y-0 border-slate-50">
       <div className="h-14 border-slate-50 bg-black fixed w-5/12 mr-12 border-r text-white pl-2 flex z-10">
@@ -28,7 +30,8 @@ export default function ProfileMainbar() {
       </div>
 
       <div className="h-56 pt-14 bg-amber-400"></div>
-      <div className="px-4 pt-3">
+      <div className="px-4 pt-3 relative">
+        <div className="absolute bg-orange-400 w-32 h-32 rounded-full bottom-44"></div>
         <div className="h-20 flex justify-end">
           <button className="w-28 h-9 text-sm text-white font-semibold rounded-full border border-slate-300 px-4 bg-black hover:bg-gray-50">
             Edit Profile
@@ -83,28 +86,38 @@ export default function ProfileMainbar() {
       </div>
 
       <div className="h-14 flex border-b border-slate-50">
-        <div className="w-28 px-1 flex justify-center hover:bg-slate-50 cursor-pointer">
-          <div className="py-4 px-0.5 text-white font-semibold border-b-4 border-slate-100">
+        <div className="w-28 px-1 flex justify-center hover:bg-slate-50 cursor-pointer" onClick={()=>{
+            navigate("/profile")
+          }}>
+          <div className={`py-4 px-0.5 font-semibold ${route ==="posts" ? "text-white border-b-4 border-slate-100" : "text-slate-100"}`}>
             Posts
           </div>
         </div>
-        <div className="w-32 flex justify-center hover:bg-slate-50 cursor-pointer">
-          <div className="py-4 px-0.5 text-white font-semibold border-b-4 border-slate-100">
+        <div className="w-32 flex justify-center hover:bg-slate-50 cursor-pointer" onClick={()=>{
+            navigate("/profile/replies")
+          }}>
+          <div className={`py-4 px-0.5 font-semibold ${route ==="replies" ? "text-white border-b-4 border-slate-100" : "text-slate-100"}`}>
             Replies
           </div>
         </div>
-        <div className="w-32 flex justify-center hover:bg-slate-50 cursor-pointer">
-          <div className="py-4 px-0.5 text-white font-semibold border-b-4 border-slate-100">
+        <div className="w-32 flex justify-center hover:bg-slate-50 cursor-pointer" onClick={()=>{
+            navigate("/profile/highlights")
+          }}>
+          <div className={`py-4 px-0.5 font-semibold ${route ==="highlights" ? "text-white border-b-4 border-slate-100" : "text-slate-100"}`}>
             Highlights
           </div>
         </div>
-        <div className="w-28 flex justify-center hover:bg-slate-50 cursor-pointer">
-          <div className="py-4 px-0.5 text-white font-semibold border-b-4 border-slate-100">
+        <div className="w-28 flex justify-center hover:bg-slate-50 cursor-pointer" onClick={()=>{
+            navigate("/profile/media")
+          }}>
+          <div className={`py-4 px-0.5 font-semibold ${route ==="media" ? "text-white border-b-4 border-slate-100" : "text-slate-100"}`}>
             Media
           </div>
         </div>
-        <div className="w-28 flex justify-center hover:bg-slate-50 cursor-pointer">
-          <div className="py-4 px-0.5 text-white font-semibold border-b-4 border-slate-100">
+        <div className="w-28 flex justify-center hover:bg-slate-50 cursor-pointer" onClick={()=>{
+            navigate("/profile/likes")
+          }}>
+          <div className={`py-4 px-0.5 font-semibold ${route ==="likes" ? "text-white border-b-4 border-slate-100" : "text-slate-100"}`}>
             Likes
           </div>
         </div>

@@ -1,10 +1,15 @@
+import { useNavigate } from "react-router-dom"
+
 export default function Login() {
+  const navigate = useNavigate()
   return (
     <div className="h-screen bg-gray-50 py-16 flex justify-center">
       <div className="bg-black w-2/5 h-full rounded-2xl">
         <div className="h-16 flex pt-2 pl-2">
           <div>
-            <div className="hover:bg-gray-50 rounded-full w-9 h-9 flex justify-center pt-2.5 cursor-pointer">
+            <div className="hover:bg-gray-50 rounded-full w-9 h-9 flex justify-center pt-2.5 cursor-pointer" onClick={()=>{
+              navigate("/")
+            }}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="16"
@@ -100,7 +105,9 @@ export default function Login() {
           placeholder="Password"
         ></input>
 
-        <button className="text-black bg-white mt-3 rounded-full ml-36 w-72 h-9 flex justify-center text-sm font-bold">
+        <button className="text-black bg-white mt-3 rounded-full ml-36 w-72 h-9 flex justify-center text-sm font-bold" onClick={()=>{
+          navigate("/home")
+        }}>
           <div className="my-auto">Log in</div>
         </button>
 
@@ -110,7 +117,12 @@ export default function Login() {
 
         <div className="ml-36 text-slate-100 mt-12">
           Don't have an account?{" "}
-          <span className="text-slate-300 cursor-pointer hover:underline">
+          <span
+            className="text-slate-300 cursor-pointer hover:underline"
+            onClick={() => {
+              navigate("/signup")
+            }}
+          >
             Sign up
           </span>
         </div>

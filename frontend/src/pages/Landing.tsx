@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom"
+
 export default function Landing() {
+  const navigate = useNavigate()
   return (
     <div className="bg-black h-screen">
       <div className="grid grid-cols-2">
@@ -75,7 +78,9 @@ export default function Landing() {
             <hr className="w-32 mt-3 border-slate-50"></hr>
           </div>
 
-          <button className="text-white bg-blue-50 hover:bg-blue-100 rounded-full w-72 h-10 flex justify-center text-sm font-bold">
+          <button className="text-white bg-blue-50 hover:bg-blue-100 rounded-full w-72 h-10 flex justify-center text-sm font-bold" onClick={()=>{
+            navigate("/signup")
+          }}>
             <div className="my-auto">Create Account</div>
           </button>
 
@@ -98,7 +103,12 @@ export default function Landing() {
             Already have an account?
           </div>
 
-          <button className="mt-4 text-slate-300 bg-black hover:bg-slate-600 rounded-full w-72 h-10 border border-slate-300 flex justify-center text-sm font-bold">
+          <button
+            className="mt-4 text-slate-300 bg-black hover:bg-slate-600 rounded-full w-72 h-10 border border-slate-300 flex justify-center text-sm font-bold"
+            onClick={() => {
+              navigate("/login")
+            }}
+          >
             <div className="my-auto">Sign in</div>
           </button>
         </div>

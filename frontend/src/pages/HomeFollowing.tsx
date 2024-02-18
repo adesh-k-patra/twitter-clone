@@ -4,7 +4,7 @@ import Post from "../components/Post"
 import Feed from "../components/Feed"
 import { useNavigate } from "react-router-dom"
 
-export default function Home() {
+export default function HomeFollowing() {
   const navigate = useNavigate()
   return (
     <div className="bg-black grid grid-cols-12">
@@ -14,14 +14,14 @@ export default function Home() {
           <div className="col-span-5 hover:bg-slate-50 flex justify-center pt-4 cursor-pointer" onClick={()=>{
             navigate("/home")
           }}>
-            <div className="text-white font-semibold border-b-4 border-slate-100 px-1">
+            <div className="text-slate-100 font-semibold px-1">
               For you
             </div>
           </div>
           <div className="col-span-6 hover:bg-slate-50 flex justify-center pt-4 cursor-pointer" onClick={()=>{
-            navigate('/home/following')
+            navigate("/home/following")
           }}>
-            <div className="text-slate-100 font-semibold px-1">
+            <div className="text-white font-semibold border-slate-100 border-b-4 px-1">
               Following
             </div>
           </div>

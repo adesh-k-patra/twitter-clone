@@ -1,4 +1,7 @@
-export default function LeftSidebar() {
+import { useNavigate } from "react-router-dom"
+
+export default function LeftSidebar({route}:{route:string}) {
+  const navigate = useNavigate()
   return (
     <div className="col-span-3 h-full text-white">
       <div className="hover:bg-slate-50 cursor-pointer ml-20 pt-3 rounded-full w-14 h-14 flex justify-center">
@@ -15,7 +18,9 @@ export default function LeftSidebar() {
         </svg>
       </div>
       <div className="pl-20 my-0.5">
-        <button className="text-xl cursor-pointer hover:bg-slate-50 py-2.5 pl-3 pr-10 rounded-3xl flex">
+        <button className="text-xl cursor-pointer hover:bg-slate-50 py-2.5 pl-3 pr-10 rounded-3xl flex" onClick={()=>{
+            navigate("/home")
+          }}>
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +34,7 @@ export default function LeftSidebar() {
               />
             </svg>
           </span>
-          <div className="pl-5">Home</div>
+          <div className={`pl-5 ${route==="home" ? "font-bold" : ""}`}>Home</div>
         </button>
       </div>
       <div className="pl-20 my-0.5">
@@ -47,7 +52,7 @@ export default function LeftSidebar() {
               />
             </svg>
           </span>
-          <span className="pl-5">Explore</span>
+          <span className={`pl-5 ${route==="explore" ? "font-bold" : ""}`}>Explore</span>
         </button>
       </div>
       <div className="pl-20 my-0.5">
@@ -65,7 +70,7 @@ export default function LeftSidebar() {
               />
             </svg>
           </span>
-          <span className="pl-5">Notifications</span>
+          <span className={`pl-5 ${route==="notifications" ? "font-bold" : ""}`}>Notifications</span>
         </button>
       </div>
       <div className="pl-20 my-0.5">
@@ -83,7 +88,7 @@ export default function LeftSidebar() {
               />
             </svg>
           </span>
-          <span className="pl-5">Messages</span>
+          <span className={`pl-5 ${route==="messages" ? "font-bold" : ""}`}>Messages</span>
         </button>
       </div>
       <div className="pl-20 my-0.5">
@@ -101,7 +106,7 @@ export default function LeftSidebar() {
               />
             </svg>
           </span>
-          <span className="pl-5">Grok</span>
+          <span className={`pl-5 ${route==="grok" ? "font-bold" : ""}`}>Grok</span>
         </button>
       </div>
       <div className="pl-20 my-0.5">
@@ -119,7 +124,7 @@ export default function LeftSidebar() {
               />
             </svg>
           </span>
-          <span className="pl-5">Lists</span>
+          <span className={`pl-5 ${route==="lists" ? "font-bold" : ""}`}>Lists</span>
         </button>
       </div>
       <div className="pl-20 my-0.5">
@@ -137,7 +142,7 @@ export default function LeftSidebar() {
               />
             </svg>
           </span>
-          <span className="pl-5">Bookmarks</span>
+          <span className={`pl-5 ${route==="bookmarks" ? "font-bold" : ""}`}>Bookmarks</span>
         </button>
       </div>
       <div className="pl-20 my-0.5">
@@ -155,7 +160,7 @@ export default function LeftSidebar() {
               />
             </svg>
           </span>
-          <span className="pl-5">Communities</span>
+          <span className={`pl-5 ${route==="communities" ? "font-bold" : ""}`}>Communities</span>
         </button>
       </div>
       <div className="pl-20 my-0.5">
@@ -173,11 +178,13 @@ export default function LeftSidebar() {
               />
             </svg>
           </span>
-          <span className="pl-5">Premium</span>
+          <span className={`pl-5 ${route==="premium" ? "font-bold" : ""}`}>Premium</span>
         </button>
       </div>
       <div className="pl-20 my-0.5">
-        <button className="text-xl cursor-pointer hover:bg-slate-50 py-2.5 pl-3 pr-10 rounded-3xl flex">
+        <button className="text-xl cursor-pointer hover:bg-slate-50 py-2.5 pl-3 pr-10 rounded-3xl flex" onClick={()=>{
+            navigate("/profile")
+          }}>
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +198,7 @@ export default function LeftSidebar() {
               />
             </svg>
           </span>
-          <span className="pl-5">Profile</span>
+          <span className={`pl-5 ${route==="profile" ? "font-bold" : ""}`}>Profile</span>
         </button>
       </div>
       <div className="pl-20 my-0.5">
@@ -209,7 +216,7 @@ export default function LeftSidebar() {
               />
             </svg>
           </span>
-          <span className="pl-5">More</span>
+          <span className={`pl-5 ${route==="more" ? "font-bold" : ""}`}>More</span>
         </button>
       </div>
       <div className="pl-20 my-5">
