@@ -1,7 +1,45 @@
+import { useRef } from "react"
 import { useNavigate } from "react-router-dom"
+import axios from "axios"
 
 export default function Signup() {
   const navigate = useNavigate()
+  const nameRef = useRef<HTMLInputElement>(null)
+  const usernameRef = useRef<HTMLInputElement>(null)
+  const emailRef = useRef<HTMLInputElement>(null)
+  const passwordRef = useRef<HTMLInputElement>(null)
+  const dateRef = useRef<HTMLInputElement>(null)
+  const monthRef = useRef<HTMLInputElement>(null)
+  const yearRef = useRef<HTMLInputElement>(null)
+
+  async function handleSignUp () {
+    const date = dateRef.current?.value || ''
+    const month = monthRef.current?.value || ''
+    const year = yearRef.current?.value || '' 
+    const dob = date + month + year;
+    const months: string[] = ["January","February","March","April","May","June","July","August","September","October","November","December"] 
+    const presentdate: Date = new Date()
+    const presentMonth = months[presentdate.getMonth()]
+    const formattedDate = presentMonth+" "+presentdate.getFullYear()
+
+    try {
+      const response = await axios.post("http://localhost:8787/signup" , {
+        name : nameRef.current?.value,
+        username : usernameRef.current?.value,
+        email : emailRef.current?.value,
+        password : passwordRef.current?.value,
+        dob : dob,
+        date : formattedDate
+      })
+      const token = response.data.token
+      localStorage.setItem("token",token)
+      navigate('/home')
+    } catch (error) {
+      alert("Username/email already taken")
+    }
+  }
+
+
   return (
     <div className="h-screen bg-gray-50 py-16 flex justify-center">
       <div className="bg-black w-2/5 h-full rounded-2xl">
@@ -46,21 +84,25 @@ export default function Signup() {
           <input
             className="mt-5 border focus:border-2 border-slate-50 rounded-md bg-black w-full h-12 text-lg text-white px-2 outline-0 focus:border-slate-100 placeholder:text-slate-100"
             placeholder="Name"
+            ref={nameRef}
           ></input>
 
           <input
             className="mt-2 border focus:border-2 border-slate-50 rounded-md bg-black w-full h-12 text-lg text-white px-2 outline-0 focus:border-slate-100 placeholder:text-slate-100"
             placeholder="Username"
+            ref={usernameRef}
           ></input>
 
           <input
             className="mt-2 border focus:border-2 border-slate-50 rounded-md bg-black w-full h-12 text-lg text-white px-2 outline-0 focus:border-slate-100 placeholder:text-slate-100"
             placeholder="Email ID"
+            ref={emailRef}
           ></input>
 
           <input
             className="mt-2 border focus:border-2 border-slate-50 rounded-md bg-black w-full h-12 text-lg text-white px-2 outline-0 focus:border-slate-100 placeholder:text-slate-100"
             placeholder="Password"
+            ref={passwordRef}
           ></input>
 
           <div className="mt-5">
@@ -74,23 +116,24 @@ export default function Signup() {
                 className="border focus:border-2 border-slate-50 w-24 mr-3 rounded-md bg-black h-12 text-lg text-white text-center px-2 outline-0 focus:border-slate-100 placeholder:text-slate-100"
                 placeholder="DD"
                 maxLength={2}
+                ref={dateRef}
               ></input>
               <input
                 className="border focus:border-2 border-slate-50 w-24 mr-3 rounded-md bg-black h-12 text-lg text-white text-center px-2 outline-0 focus:border-slate-100 placeholder:text-slate-100"
                 placeholder="MM"
                 maxLength={2}
+                ref={monthRef}
               ></input>
               <input
                 className="border focus:border-2 border-slate-50 w-36 rounded-md bg-black h-12 text-lg text-white text-center px-2 outline-0 focus:border-slate-100 placeholder:text-slate-100"
                 placeholder="YYYY"
                 maxLength={4}
+                ref={yearRef}
               ></input>
             </div>
           </div>
 
-          <button className="text-black bg-white mt-10 rounded-full w-full h-9 flex justify-center text-sm font-bold" onClick={()=>{
-            navigate("/home")
-          }}>
+          <button className="text-black bg-white mt-10 rounded-full w-full h-9 flex justify-center text-sm font-bold" onClick={handleSignUp}>
             <div className="my-auto">Sign up</div>
           </button>
 

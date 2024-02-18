@@ -1,7 +1,26 @@
+import { useRef } from "react"
 import { useNavigate } from "react-router-dom"
+import axios from "axios"
 
 export default function Login() {
   const navigate = useNavigate()
+  const usernameRef = useRef<HTMLInputElement>(null)
+  const passwordRef = useRef<HTMLInputElement>(null)
+
+  async function handleLogin(){
+    try {
+      const response = await axios.post("http://localhost:8787/login" , {
+        username : usernameRef.current?.value,
+        password : passwordRef.current?.value,
+      })
+      const token = response.data.token
+      localStorage.setItem("token",token)
+      navigate('/home')
+    } catch (error) {
+      alert("Incorrect Username/Password")
+    }
+  }
+
   return (
     <div className="h-screen bg-gray-50 py-16 flex justify-center">
       <div className="bg-black w-2/5 h-full rounded-2xl">
@@ -98,16 +117,16 @@ export default function Login() {
         <input
           className="ml-36 mt-1 border focus:border-2 border-slate-50 rounded-md bg-black w-72 h-12 text-lg text-white px-2 outline-0 focus:border-slate-100 placeholder:text-slate-100"
           placeholder="Username"
+          ref={usernameRef}
         ></input>
 
         <input
           className="ml-36 my-4 border focus:border-2 border-slate-50 rounded-md bg-black w-72 h-12 text-lg text-white px-2 outline-0 focus:border-slate-100 placeholder:text-slate-100"
           placeholder="Password"
+          ref={passwordRef}
         ></input>
 
-        <button className="text-black bg-white mt-3 rounded-full ml-36 w-72 h-9 flex justify-center text-sm font-bold" onClick={()=>{
-          navigate("/home")
-        }}>
+        <button className="text-black bg-white mt-3 rounded-full ml-36 w-72 h-9 flex justify-center text-sm font-bold" onClick={handleLogin}>
           <div className="my-auto">Log in</div>
         </button>
 
